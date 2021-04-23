@@ -15,7 +15,17 @@ function setCookie(cname, cvalue, exdays) {
   var expires = "expires="+d.toUTCString()
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
 }
+var btnSeachUser= document.querySelector("#seach-user");
+var btnSeachTel= document.querySelector("#seach-tel");
+var user = document.querySelector(".container-form-user");  
+var tel = document.querySelector("container-form");  
 
+btnSignIn.addEventListener("click", function (){ 
+    user.className = "seach-user-js"; 
+}); 
+btnSignIn.addEventListener("click", function (){ 
+    tel.className = "seach-js"; 
+});
 function getCookie(cname) {
   var name = cname + "="
   var ca = document.cookie.split(';')
