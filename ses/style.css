@@ -29,7 +29,13 @@
 	--main-color: var(--light-color);
 	--second-color: var(--light-second-color);
 }
-
+.right { 
+	
+	--main-bg-color: var(--light-background);
+	--second-bg-color: var(--light-second-background);
+	--main-color: var(--light-color);
+	--second-color: var(--light-second-color);
+}
 
 * {  
 	margin: 0; 
@@ -216,7 +222,13 @@ fieldset {
 	
 }
 
-
+.logoo { 
+	height: 85%;
+	padding: 0px;  
+	position:absolute; 
+	left: 82;
+	
+}
 
 .navbar-badge {
 	font-size: .6rem;
