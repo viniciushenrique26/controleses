@@ -86,8 +86,8 @@
 	<div class="sidebar">
 		<ul class="sidebar-nav">
 			<li class="sidebar-nav-item">
-				<a href="#" id="seach-tel" class="sidebar-nav-link">
-					<div>
+				<a href="#" onclick="seach()" id="seach-tel" class="sidebar-nav-link">
+					<div onclick="seach-user">
 						<i class="fas fa-search"></i>
 					</div>
 					<span>
@@ -98,7 +98,7 @@
 			</li>
 
 			<li class="sidebar-nav-item">
-				<a href="#" id="seach-user" class="sidebar-nav-link">
+				<a href="#" onclick="seach_user()" id="seach-user" class="sidebar-nav-link">
 					<div>
 						<i class="fas fa-user"></i>
 					</div>
@@ -106,7 +106,7 @@
 				</a>
 			</li>
 			<li class="sidebar-nav-item">
-				<a href="#" class="sidebar-nav-link">
+				<a href="#" onclick="seach_cel()"  class="sidebar-nav-link">
 					<div>
 						<i class="fas fa-mobile"></i>
 					</div>
@@ -120,8 +120,8 @@
 
 
 	
-
-	<div class="container-form">
+	<div  id="qqq">
+	<div class="container-form" id="container-cell">
 		<fieldset>
 
 			<legend>
@@ -179,8 +179,9 @@
 			</form>
 		</fieldset>
 	</div>
+</div>
 
-	<div class="container-form-user">
+	<div class="container-form-user" id="container-user">
 		<fieldset>
 
 			<legend>
@@ -223,10 +224,10 @@
 
 				<input type="hidden" name="acao" value="incluir">
 
-				<button type="submit" class="btn btn-primary" id="botao">
+				<button type="submit" onclick="gravar_user()" class="btn btn-primary" id="botao">
 					Gravar
 				</button>
-				<a href="" class="btn btn-danger">Cancelar</a>
+				<a href="" class="btn btn-danger" onclick="cancelar_user" >Cancelar</a>
 
 			</form>
 		</fieldset>
@@ -239,6 +240,8 @@
 	<!-- end import script -->
 	<!-- Code injected by live-server -->
 	<script type="text/javascript">
+
+	
 		// <![CDATA[  <-- For SVG support
 		if ('WebSocket' in window) {
 			(function () {
