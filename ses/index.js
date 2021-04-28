@@ -1,3 +1,4 @@
+const { func } = require("prop-types");
 
 
 const body = document.getElementsByTagName('body')[0]
@@ -25,20 +26,32 @@ window.onclick = function(event) {
 	openCloseDropdown(event)
 }
 
-$( document ).ready(function() {
-   
-    function seach_cel() {  
-        alert("cel"); 
-        $('#qqq').hide(); 
-        $('#container-cell').show();
+function seach_cel() {  
+    $('#container-cell').show(); 
+    $('#container-user').hide(); 
+    $('#container-seach').hide(); 
+    $('#container-vinculo').hide();
     
-        alert("cel3"); 
-    }    
-    function seach_user() { 
-        alert("abc"); 
-         $('#container-user').show(); 
-         $('#container-cell').html('ggg'); 
-    }
-});
+     
+};    
+function seach_user() { 
+     $('#container-user').show(); 
+     $('#container-cell').hide(); 
+     $('#container-seach').hide(); 
+     $('#container-vinculo').hide();
+};
 
 
+function seach() {  
+    $('#container-seach').show();
+    $('#container-user').hide(); 
+    $('#container-cell').hide();  
+    $('#container-vinculo').hide();
+};
+
+function btn_vinculo() { 
+    $('#container-vinculo').show();
+    $('#container-seach').hide();
+    $('#container-user').hide(); 
+    $('#container-cell').hide();  
+};

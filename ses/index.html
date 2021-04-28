@@ -11,7 +11,8 @@
 
 
 	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"> 
+	
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
@@ -62,7 +63,7 @@
 	</style>
 </head>
 
-<body class="overlay-scrollbar light sidebar-expand">
+<body class="overlay-scrollbar light sidebar-expand"> 
 
 	<div class="navbar">
 
@@ -118,9 +119,32 @@
 
 
 
+	<div class="container-seach-form" id="container-seach">
+		<fieldset>
 
+			<!-- Cabeçalho da Listagem -->
+			<legend><h2>Listagem de Celulares e Usuários Vinculados</h2></legend>
+
+			<!-- Formulário de Pesquisa -->
+			<form action="" method="get" id="form-contato" class="form-horizontal col-md-10">
+				<label class="label-seach" for="termo">Pesquisar</label>
+				<div class="col-md-7">
+			    	<input type="text" class="form-control" id="termo" name="termo" placeholder="Infome o Nome ou E-mail">
+				</div>
+			    <button type="submit" class="btn btn-primary">Pesquisar</button>
+			    <a class="btn btn-primary">Ver Todos</a>
+			</form>
+
+			<!-- Link para página de cadastro -->
+			<a  class="btn btn-success pull-right" onclick="btn_vinculo()">Vincular Celular a Usuário</a>
+			<div class="clearfix"></div>
+		
+			
+				
+		</fieldset>
+	</div>
 	
-	<div  id="qqq">
+
 	<div class="container-form" id="container-cell">
 		<fieldset>
 
@@ -179,7 +203,7 @@
 			</form>
 		</fieldset>
 	</div>
-</div>
+
 
 	<div class="container-form-user" id="container-user">
 		<fieldset>
@@ -231,12 +255,53 @@
 
 			</form>
 		</fieldset>
+	</div>  
+
+	<div class="container-vinculo" id="container-vinculo">
+		<fieldset>
+
+			<legend>
+				<h2>Víncular Celular a Usuário</h2>
+			<legend>
+
+			<form id="form-contato" enctype="multipart/form-data">
+
+				<div class="form-group">
+					<label for="nome">Nome</label>
+					<input type="text" class="form-control" id="nome" name="nome" placeholder="Infome o nome">
+				</div>
+
+				<div class="form-group">
+					<label for="data">Data de Inicio</label>
+					<input type="date" class="form-control" id="date" name="date" placeholder="Infome a data de recebimento do aparelho:">
+				</div>  
+				<div class="form-group">
+					<label for="data">Data de Devolução</label>
+					<input type="date" class="form-control" id="date_fim" name="date_fim" placeholder="Infome a data de devolução do aparelho do aparelho:">
+				</div>
+
+				<div class="form-group">
+					<label for="imei">IMEI</label>
+					<input type="imei" class="form-control" id="imei" name="imei" placeholder="Informe o IMEI">
+				</div>
+
+
+				<input type="hidden" name="acao" value="incluir">
+
+				<button type="submit" class="btn btn-primary" id="botao">
+					Gravar
+				</button>
+				<a href="" class="btn btn-danger">Cancelar</a>
+
+			</form>
+		</fieldset>
 	</div>
 
 	<!-- end main content -->
 	<!-- import script -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-	<script src="index.js"></script>
+	
+	<script src="index.js"></script> 
+	
 	<!-- end import script -->
 	<!-- Code injected by live-server -->
 	<script type="text/javascript">
@@ -315,7 +380,8 @@
 			console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 		}
 	// ]]>
-	</script>
+	</script>  
+	<script src="jquery-3.6.0.min.js"></script>
 </body>
 
 </html>
