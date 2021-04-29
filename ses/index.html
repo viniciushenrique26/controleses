@@ -123,7 +123,11 @@
 		<fieldset>
 
 			<!-- Cabeçalho da Listagem -->
-			<legend><h2>Listagem de Celulares e Usuários Vinculados</h2></legend>
+			<legend><h2 style="
+				position: relative;
+				left: -45%;
+				top: 30px;
+			">Listagem de Celulares e Usuários Vinculados</h2></legend>
 
 			<!-- Formulário de Pesquisa -->
 			<form action="" method="get" id="form-contato" class="form-horizontal col-md-10">
@@ -131,8 +135,11 @@
 				<div class="col-md-7">
 			    	<input type="text" class="form-control" id="termo" name="termo" placeholder="Infome o Nome ou E-mail">
 				</div>
-			    <button type="submit" class="btn btn-primary">Pesquisar</button>
-			    <a class="btn btn-primary">Ver Todos</a>
+			    <button type="submit" id="seach-list" class="btn btn-primary" style="
+				position: fixed;
+				left: 68%;
+			" onclick="pesquisar_vinculo()">Pesquisar</button>
+			    <a class="btn btn-primary" onclick="view_all()">Ver Todos</a>
 			</form>
 
 			<!-- Link para página de cadastro -->
@@ -195,10 +202,12 @@
 
 				<input type="hidden" name="acao" value="incluir">
 
-				<button type="submit" class="btn btn-primary" id="botao">
+				<button type="submit" class="btn btn-primary" onclick="record_cell()" id="btn-record-cell" style="
+				top: 572px;
+			" >
 					Gravar
 				</button>
-				<a href="" class="btn btn-danger">Cancelar</a>
+				<a href="" class="btn btn-danger" onclick="cancelar_cell()" id="cancel-form-cell">Cancelar</a>
 
 			</form>
 		</fieldset>
@@ -248,10 +257,10 @@
 
 				<input type="hidden" name="acao" value="incluir">
 
-				<button type="submit" onclick="gravar_user()" class="btn btn-primary" id="botao">
+				<button type="submit" onclick="record_user()" class="btn btn-primary" id="btn-record-user">
 					Gravar
 				</button>
-				<a href="" class="btn btn-danger" onclick="cancelar_user" >Cancelar</a>
+				<a href="" class="btn btn-danger" id="cancel-form-user" onclick="cancelar_user()" >Cancelar</a>
 
 			</form>
 		</fieldset>
@@ -288,10 +297,12 @@
 
 				<input type="hidden" name="acao" value="incluir">
 
-				<button type="submit" class="btn btn-primary" id="botao">
+				<button type="submit" class="btn btn-primary" onclick="record_vinculo()" id="botao" style="
+				top: 493px;
+			">
 					Gravar
 				</button>
-				<a href="" class="btn btn-danger">Cancelar</a>
+				<a href="" class="btn btn-danger" id="cancel-form-vinculo">Cancelar</a>
 
 			</form>
 		</fieldset>

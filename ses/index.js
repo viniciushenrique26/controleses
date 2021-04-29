@@ -54,4 +54,27 @@ function btn_vinculo() {
     $('#container-seach').hide();
     $('#container-user').hide(); 
     $('#container-cell').hide();  
+}; 
+
+function record_cell() { 
+    alert("Celular Gravado!");
+}; 
+
+function cancelar_cell() { 
+    alert("Cancelado!");
+}; 
+
+function record_user() { 
+    alert("Usuário Gravado!");
+}; 
+
+function cancelar_user() { 
+    alert("Cancelado!");
+}; 
+
+function pesquisar_vinculo() { 
+    alert("Gerando Lista....");
+}; 
+function view_all() { 
+    alert("Aguarde um instante...");
 };
