@@ -1,0 +1,66 @@
+<html>
+
+<head> 
+	<meta charset="UTF-8">
+	<title>Controle de Distribuição de Novos Celulares</title>
+
+	<meta name="viewport"
+		content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="imagens/unnamed.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+
+	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"> 
+	
+
+</head>
+
+	<div class="container-vinculo" id="container-vinculo">
+		<fieldset>
+
+			<legend>
+				<h2>Víncular Celular a Usuário</h2>
+			<legend>
+
+			<form id="form-contato" enctype="multipart/form-data">
+
+				<div class="form-group">
+					<label for="nome">Nome</label>
+					<input type="text" class="form-control" id="nome" name="nome" placeholder="Infome o nome">
+				</div>
+
+				<div class="form-group">
+					<label for="data">Data de Inicio</label>
+					<input type="date" class="form-control" id="date" name="date" placeholder="Infome a data de recebimento do aparelho:">
+				</div>  
+				<div class="form-group">
+					<label for="data">Data de Devolução</label>
+					<input type="date" class="form-control" id="date_fim" name="date_fim" placeholder="Infome a data de devolução do aparelho do aparelho:">
+				</div>
+
+				<div class="form-group">
+					<label for="imei">IMEI</label>
+					<input type="imei" class="form-control" id="imei" name="imei" placeholder="Informe o IMEI">
+				</div>
+
+
+				<input type="hidden" name="acao" value="incluir">
+
+				<button type="submit" class="btn btn-primary" onclick="record_vinculo()" id="botao" style="
+				top: 493px;
+			">
+					Gravar
+				</button>
+				<a href="" class="btn btn-danger" id="cancel-form-vinculo">Cancelar</a>
+
+			</form>
+		</fieldset>
+	</div>
+
+    <script src="index.js"></script>
+	<script src="jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

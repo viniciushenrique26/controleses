@@ -1,0 +1,75 @@
+<html>
+
+<head> 
+	<meta charset="UTF-8">
+	<title>Controle de Distribuição de Novos Celulares</title>
+
+	<meta name="viewport"
+		content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="imagens/unnamed.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+
+	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"> 
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+	<div class="container-form-user" id="container-user">
+		<fieldset>
+
+			<legend>
+				<h2>Cadastro de Usuário</h2>
+			<legend>
+
+			<form id="form-contato" enctype="multipart/form-data">
+
+				<div class="form-group">
+					<label for="nome">Nome</label>
+					<input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome:">
+				</div>
+
+				<div class="form-group">
+					<label for="matricula">Matrícula</label>
+					<input type="text" class="form-control" id="matricula" name="matricula" placeholder="Digite sua matrícula:">
+				</div>
+
+				<div class="form-group">
+					<label for="cpf">CPF</label>
+					<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF: ">
+				</div>
+				<div class="form-group">
+					<label for="cargo">Cargo</label>
+					<input type="text" class="form-control" id="cargo" name="cargo" placeholder="Informe o seu cargo: ">
+				</div> 
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="Digite o seu email: "> 
+				</div> 
+				<div class="form-group">
+					<label for="lotacao">Lotação</label>
+					<input type="text" class="form-control" id="lotacao" name="lotacao" placeholder="Informe a sua lotacao: "> 
+				</div> 
+				<div class="form-group">
+					<label for="tel">Telefone</label>
+					<input type="tel" class="form-control" id="tel" name="tel" placeholder="Digite o seu telefone: "> 
+				</div>
+
+
+				<input type="hidden" name="acao" value="incluir">
+
+				<button type="submit" onclick="record_user()" class="btn btn-primary" id="btn-record-user">
+					Gravar
+				</button>
+				<a href="" class="btn btn-danger" id="cancel-form-user" onclick="cancelar_user()" >Cancelar</a>
+
+			</form>
+		</fieldset>
+	</div>  
+
+	<script src="index.js"></script>
+	<script src="jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
